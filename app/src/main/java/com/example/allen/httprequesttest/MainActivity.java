@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void sendRequest(){
         HttpClient client = new HttpClient("http://www.drk7.jp/weather/xml/27.xml");
+        // GUIコンポーネントを操作するためのスレッド
         Handler handler   = new Handler(Looper.getMainLooper()) {
             @Override
             public void handleMessage(Message msg) {
